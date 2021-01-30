@@ -21,6 +21,12 @@ $xl: 1200px;
     flex-direction: column;
     align-items: center;
   }
+  .view-all-btn {
+    a {
+      font-size: 14px;
+      padding: 13px 5px !important;
+    }
+  }
 }
 
 @media (max-width: $md) {
@@ -47,6 +53,21 @@ $xl: 1200px;
   }
   .social-icons-container {
     display: none !important;
+  }
+  .main-navigation {
+    flex-wrap: wrap;
+    .menu-nav-icons {
+      flex-basis: 100%;
+      .menu-primary-menu-container {
+        flex-basis: 100%;
+        text-align: center;
+        ul {
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
   }
 }
 

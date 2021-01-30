@@ -1010,10 +1010,11 @@ body {
   right: 30px;
   -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0.5;
   z-index: 1000;
   border-radius: 50%;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 #scroll-top-button::after {
@@ -1029,11 +1030,7 @@ body {
 #scroll-top-button:hover {
   cursor: pointer;
   background-color: #292b2c;
-}
-
-#scroll-top-button.show {
   opacity: 1;
-  visibility: visible;
 }
 
 .site-header {
@@ -1046,33 +1043,45 @@ body {
   display: flex;
 }
 
-.site-header .container .nav-container .main-navigation {
+.site-header .container .main-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.site-header .container .nav-container .main-navigation .menu-toggle {
+.site-header .container .main-navigation .menu-toggle {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
   padding: 0;
 }
 
-.site-header .container .nav-container .main-navigation .menu-primary-menu-container .nav-menu {
+.site-header .container .main-navigation .menu-nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 2rem;
 }
 
-.site-header .container .nav-container .main-navigation .menu-primary-menu-container .nav-menu li a {
+.site-header .container .main-navigation .menu-primary-menu-container .nav-menu {
+  gap: 2rem;
+}
+
+.site-header .container .main-navigation .menu-primary-menu-container .nav-menu li a {
   color: rgba(41, 43, 44, 0.75);
 }
 
-.site-header .container .nav-container .main-navigation .menu-primary-menu-container .nav-menu li a:hover {
+.site-header .container .main-navigation .menu-primary-menu-container .nav-menu li a:hover {
   color: #292b2c;
 }
 
-.site-header .container .nav-container .main-navigation .social-icons-container {
+.site-header .container .main-navigation .social-icons-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1082,11 +1091,11 @@ body {
   gap: 10px;
 }
 
-.site-header .container .nav-container .main-navigation .social-icons-container a {
+.site-header .container .main-navigation .social-icons-container a {
   color: rgba(41, 43, 44, 0.75);
 }
 
-.site-header .container .nav-container .main-navigation .social-icons-container a:hover {
+.site-header .container .main-navigation .social-icons-container a:hover {
   color: #292b2c;
 }
 
@@ -1601,7 +1610,8 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.view-all-wrapper .view-all-btn button {
+.view-all-wrapper .view-all-btn .view-btn {
+  text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   border: 1px solid #f6f6f6;
@@ -1611,7 +1621,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.view-all-wrapper .view-all-btn button:hover {
+.view-all-wrapper .view-all-btn .view-btn:hover {
   background-color: #000000;
 }
 
@@ -1705,9 +1715,44 @@ body {
   text-align: start;
 }
 
-.masonry-grid-img .masonry-grid-desc p {
+.masonry-grid-img .masonry-grid-desc .title {
+  font-size: 1.4rem;
+  margin: 5px 0;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .cats ul {
   margin: 0;
-  font-size: 1.2rem;
+  padding: 0;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .cats ul li {
+  list-style-type: none;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .cats ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .cats ul li a:hover {
+  text-decoration: underline;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .tags a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+}
+
+.masonry-grid-img .masonry-grid-desc .taxonomy .tags a:hover {
+  text-decoration: underline;
 }
 
 .contact-page .container {
@@ -1932,6 +1977,10 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .view-all-btn a {
+    font-size: 14px;
+    padding: 13px 5px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1962,6 +2011,22 @@ body {
   }
   .social-icons-container {
     display: none !important;
+  }
+  .main-navigation {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main-navigation .menu-nav-icons {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .main-navigation .menu-nav-icons .menu-primary-menu-container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  .main-navigation .menu-nav-icons .menu-primary-menu-container ul li {
+    margin: 10px 0;
   }
 }
 

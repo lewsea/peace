@@ -182,3 +182,37 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Gallery Post Type
+
+function gallery_post_type() {
+	register_post_type('gallery', 
+	array(
+		'rewrite' => array('slug' => 'galleries'),
+		'labels' => array(
+			'name' => 'Galleries',
+			'singular_name' => 'Galery',
+			'add_new_item' => 'Add New Gallery',
+			'edit_item' => 'Edit Gallery'
+		),
+		'menu-icon'  => 'dashicons-clipboard',
+		'public' => true,
+		'has_archive' => true,
+		'supports' => array(
+			'title', 'thumbnail',
+		)
+		)
+	);
+	register_taxonomy_for_object_type('category','gallery');
+}
+
+add_action('init', 'gallery_post_type');
+
+// Adding tags to custom posts types
+
+function gp_register_taxonomy_for_object_type() {
+    register_taxonomy_for_object_type( 'post_tag', 'gallery' );
+};
+
+add_action( 'init', 'gp_register_taxonomy_for_object_type' );
+
+

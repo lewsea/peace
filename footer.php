@@ -22,24 +22,28 @@
 				<h4>BLOGS</h4>
 				<div class="footer-menu-content">
 					<div class="footer-menu-blog">
+						<?php 
+						$args = array (
+							'post_type' => 'post',
+							'posts_per_page' => 2,
+						);
+						$blogposts = new WP_Query($args);
+						while ($blogposts->have_posts()) {
+							$blogposts->the_post();
+						?>
+
 						<div class="footer-menu-blog-item">
 							<div class="blog-item-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/b1.png" alt="">
+								<a href="<?php the_permalink()?>">
+									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+								</a>
 							</div>
 							<div class="blog-item-desc">
-								<p><a href="">Keeping the focus</a> </p>
-								<span>July 14, 2021</span>
+								<p><a href="<?php the_permalink()?>"><?php echo wp_trim_words(get_the_title(), 4); ?></a></p>
+								<span><?php the_time('F jS, Y'); ?>1</span>
 							</div>
 						</div>
-						<div class="footer-menu-blog-item">
-							<div class="blog-item-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/b2.png" alt="">
-							</div>
-							<div class="blog-item-desc">
-								<p><a href="">Portrait Minimalist</a> </p>
-								<span>Oct 26, 2021</span>
-							</div>
-						</div>
+						<?php } wp_reset_query(); ?>
 					</div>
 				</div>
 			</div>
@@ -47,6 +51,7 @@
 				<h4>INSTAGRAM</h4>
 				<div class="footer-menu-content">
 					<div class="footer-menu-ig">
+						<!-- <?php echo do_shortcode('[insta-gallery id="1"]'); ?> -->
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v1.png" alt="">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v2.png" alt="">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v3.png" alt="">

@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 	<main id="primary" class="site-main">
-		<div id="scroll-top-button"></div>
+		<a href="#top"id="scroll-top-button"></a>
 		<div class="home-hero-banner">
 			 <div class="container">
 				 <h1>Peace</h1>
@@ -121,7 +121,7 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/img/v4.png" alt="">
 			</div>
 			<div class="view-all-btn">
-				<button>View all my projects</button>
+				<a href="<?php echo esc_url( home_url( '/gallery' ) ); ?>" class="view-btn" >View all my projects</a>
 			</div>
 		</section>
 

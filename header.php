@@ -21,19 +21,19 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a name="top"></a>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'base-underscore' ); ?></a>
-	
 	<header id="masthead" class="site-header">
-		<div class="container flex-space-center">
-			<div class="site-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/Logo.png" alt="Peace Logo"></a>
-			</div>
-			<div class="nav-container">
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<i class="fa fa-bars"></i>
-					</button>
+		<div class="container">
+			<nav id="site-navigation" class="main-navigation">
+				<div class="site-branding">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/Logo.png" alt="Peace Logo"></a>
+				</div>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<i class="fa fa-bars"></i>
+				</button>
+				<div class="menu-nav-icons">
 					<?php
 					wp_nav_menu(
 						array(
@@ -48,7 +48,7 @@
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						<a href="#"><i class="fa fa-pinterest-p"></i></a>
 					</div>
-				</nav>
-			</div>
+				</div>
+			</nav>
 		</div>
 	</header>

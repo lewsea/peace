@@ -57,10 +57,11 @@ body {
   bottom: 30px;
   right: 30px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0.5;
   z-index: 1000;
   border-radius: 50%;
+  text-decoration: none;
+  scroll-behavior: smooth;
   &::after {
     content: '\f077';
     font-family: FontAwesome;
@@ -73,10 +74,7 @@ body {
   &:hover {
     cursor: pointer;
     background-color: $color-anchor;
-  }
-  &.show {
     opacity: 1;
-    visibility: visible;
   }
 }
 
@@ -90,38 +88,41 @@ body {
         display: flex;
       }
     }
-    .nav-container {
-      .main-navigation {
+    .main-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu-toggle {
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        padding: 0;
+      }
+      .menu-nav-icons {
         display: flex;
-        gap: 3rem;
-        .menu-toggle {
-          border: none;
-          background-color: transparent;
-          font-size: 1.5rem;
-          padding: 0;
-        }
-        .menu-primary-menu-container {
-          .nav-menu {
-            gap: 2rem;
-            li {
-              a {
-                color: rgba($color: $color-anchor, $alpha: 0.75);
-                &:hover {
-                  color: rgba($color: $color-anchor, $alpha: 1);
-                }
+        gap: 2rem;
+      }
+      .menu-primary-menu-container {
+        .nav-menu {
+          gap: 2rem;
+          li {
+            a {
+              color: rgba($color: $color-anchor, $alpha: 0.75);
+              &:hover {
+                color: rgba($color: $color-anchor, $alpha: 1);
               }
             }
           }
         }
-        .social-icons-container {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          a {
-            color: rgba($color: $color-anchor, $alpha: 0.75);
-            &:hover {
-              color: rgba($color: $color-anchor, $alpha: 1);
-            }
+      }
+      .social-icons-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        a {
+          color: rgba($color: $color-anchor, $alpha: 0.75);
+          &:hover {
+            color: rgba($color: $color-anchor, $alpha: 1);
           }
         }
       }
@@ -397,8 +398,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
-    button {
+    .view-btn {
+      text-decoration: none;
       color: $color-light;
       text-transform: uppercase;
       border: 1px solid $color-background;
@@ -494,9 +495,39 @@ body {
     transition: ease-in-out 0.2s;
     color: $color-light;
     text-align: start;
-    p {
-      margin: 0;
-      font-size: 1.2rem;
+    .title {
+      font-size: 1.4rem;
+      margin: 5px 0;
+    }
+    .taxonomy {
+      display: flex;
+      gap: 10px;
+      .cats {
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            list-style-type: none;
+            a {
+              text-decoration: none;
+              color: $color-light;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .tags {
+        a {
+          text-transform: capitalize;
+          text-decoration: none;
+          color: $color-light;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
