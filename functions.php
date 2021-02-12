@@ -140,14 +140,17 @@ add_action( 'widgets_init', 'peace_widgets_init' );
  * Enqueue scripts and styles.
  */
 function peace_scripts() {
+	wp_enqueue_style( 'peace-popup', get_template_directory_uri() . '/css/magnific-popup.css', array(), _S_VERSION );
 	wp_enqueue_style( 'peace-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style('fontawesome', '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-	
 	wp_style_add_data( 'peace-style', 'rtl', 'replace' );
 
+    wp_enqueue_script('jquery');
 	wp_enqueue_script( 'peace-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'peace-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'peace-script', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'peace-jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array(), _S_VERSION, true );
+	wp_enqueue_script( 'peace-script', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'peace-popup', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -7,19 +7,22 @@
 <?php get_header(); ?>
 
 	<main id="primary" class="site-main">
+
+        <?php get_template_part( 'template-parts/content', 'page' ) ?>
+
 		<div class="container">
 			<div class="wrapper masonry-grid">
 				<?php 
 				$args = array (
 					'post_type' => 'gallery',
-					'posts_per_page' => 99,
+					'posts_per_page' => 0,
 				);
 				$imgs = new WP_Query($args);
 				while ($imgs->have_posts()) {
 					$imgs->the_post();
 				?>
 				<div class="masonry-grid-img">
-					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="<?php the_title(); ?>">
+					<img class="" src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="<?php the_title(); ?>">
 					<div class="masonry-grid-desc">
 						<p class="title" ><?php the_title(); ?></p>
 						<div class="taxonomy">

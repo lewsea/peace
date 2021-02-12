@@ -69,6 +69,11 @@ $xl: 1200px;
       }
     }
   }
+  .page {
+    .entry-header {
+      height: 30vh;
+    }
+  }
 }
 
 @media (max-width: $lg) {

@@ -15,7 +15,7 @@ $font-size-h4: 1.35rem;
 $font-size-text: 1.15rem;
 $border-color: #e2e2e2;
 $border-radius: 8px;
-$box-shadow-hov: 0 0 8px rgba(0, 0, 0, 0.6);
+$box-shadow-hov: 0 8px 10px rgba(0, 0, 0, 0.2);
 
 body {
   color: $color-text;
@@ -45,6 +45,38 @@ body {
 .post,
 .page {
   margin: 0;
+}
+
+.page {
+  .entry-header {
+    background-color: $color-primary;
+    text-align: center;
+    position: relative;
+    // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fff' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    height: 50vh;
+    overflow: hidden;
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(2rem, 5vw, 4rem);
+      display: inline-block;
+      background-color: $color-light;
+      padding: 5px 5rem;
+      border-radius: $border-radius;
+      color: $color-anchor;
+      margin: 0;
+      z-index: 1;
+      box-shadow: $box-shadow-hov;
+    }
+    img {
+      position: relative;
+      width: 100%;
+      top: -50%;
+      //   filter: blur(2px);
+    }
+  }
 }
 
 #scroll-top-button {
@@ -390,6 +422,7 @@ body {
     img {
       flex: 25%;
       filter: brightness(60%);
+      height: 350px;
     }
   }
 
@@ -472,7 +505,8 @@ body {
 }
 
 .masonry-grid-img {
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
   padding: 10px;
   position: relative;
   cursor: pointer;
@@ -498,10 +532,12 @@ body {
     .title {
       font-size: 1.4rem;
       margin: 5px 0;
+      font-weight: 600;
     }
     .taxonomy {
       display: flex;
       gap: 10px;
+      font-size: 14px;
       .cats {
         ul {
           margin: 0;
