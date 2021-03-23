@@ -1399,10 +1399,12 @@ body {
 .about-wrapper .container .about-img .about-img-desc p {
   margin: 0;
   font-size: 30px;
+  font-weight: 600;
 }
 
 .about-wrapper .container .about-img .about-img-desc p:nth-child(2) {
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .about-wrapper .container .about-desc {
