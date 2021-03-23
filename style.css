@@ -1050,7 +1050,7 @@ body {
 }
 
 #scroll-top-button::after {
-  content: '\f077';
+  content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -1677,7 +1677,7 @@ body {
 }
 
 .contact-wrapper .wpcf7-form .wpcf7-form-control-wrap textarea {
-  height: 2rem;
+  height: 150px;
 }
 
 .contact-wrapper .wpcf7-form .wpcf7-form-control-wrap input,
@@ -1736,6 +1736,7 @@ body {
 
 .masonry-grid-img img {
   width: 100%;
+  border-radius: 3px;
 }
 
 .masonry-grid-img .masonry-grid-desc {
@@ -1991,6 +1992,45 @@ body {
   color: #1a252a;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.gallery-filter {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 1.5rem 0;
+}
+
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.mfp-arrow-left:before {
+  font-family: FontAwesome;
+  content: "\f104" !important;
+  border: none !important;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.mfp-arrow-right:after,
+.mfp-arrow-left:after {
+  border: none !important;
+}
+
+.mfp-arrow-right:before {
+  font-family: FontAwesome;
+  content: "\f105" !important;
+  border: none !important;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
 }
 
 @media (max-width: 576px) {

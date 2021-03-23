@@ -40,7 +40,7 @@
 							</div>
 							<div class="blog-item-desc">
 								<p><a href="<?php the_permalink()?>"><?php echo wp_trim_words(get_the_title(), 4); ?></a></p>
-								<span><?php the_time('F jS, Y'); ?>1</span>
+								<span><?php the_time('F jS, Y'); ?></span>
 							</div>
 						</div>
 						<?php } wp_reset_query(); ?>

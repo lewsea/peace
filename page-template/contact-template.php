@@ -14,7 +14,7 @@
 				</div>
 				<div class="contact-form-container">
 					<h4>Hi I'm Bond, James Bond.</h4>
-					<h4>Hire Me ! Plss lang lord</h4>
+                    <p>Here We Go, off the rails.</p>
 					<?php echo do_shortcode('[contact-form-7 id="28" title="Contact Form"]'); ?>
 				</div>
 			</div>
