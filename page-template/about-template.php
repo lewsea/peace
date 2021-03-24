@@ -16,7 +16,7 @@
 						<p>Age: 20</p>
 					</div>
 				</div>
-				<div class="about-desc">
+				<div class="about-desc-about">
 					<h2>Hello, I’m John, I am a photographer based in Manila.</h2>
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quaerat obcaecati nostrum sunt dicta? Repellat, impedit qui! Debitis, eligendi? Inventore provident amet eos sequi nihil voluptate ipsam, unde necessitatibus pariatur cumque debitis asperiores sed eaque maxime ducimus ea harum quis soluta quo similique reiciendis? Explicabo eum architecto exercitationem est velit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam.</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, dolorem recusandae? Assumenda, ab magni? Vero, praesentium delectus! Natus quo eos aperiam aspernatur obcaecati, totam voluptatibus neque, dolores vel voluptas dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ipsa.</p>

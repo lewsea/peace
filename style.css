@@ -1399,29 +1399,32 @@ body {
   font-weight: 400;
 }
 
-.about-wrapper .about-container .about-desc {
+.about-wrapper .about-container .about-desc-about {
   border: 1px solid #e2e2e2;
   padding: 2.5rem;
   border-radius: 8px;
+}
+
+.about-wrapper .about-container .about-desc, .about-wrapper .about-container .about-desc-about {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
-.about-wrapper .about-container .about-desc h2 {
+.about-wrapper .about-container .about-desc h2, .about-wrapper .about-container .about-desc-about h2 {
   font-size: 3.5rem;
   font-size: clamp(2.3rem, 7vw, 3.5rem);
   font-weight: 800;
   margin-top: 0;
 }
 
-.about-wrapper .about-container .about-desc p {
+.about-wrapper .about-container .about-desc p, .about-wrapper .about-container .about-desc-about p {
   color: #6c757d;
   font-family: "Merriweather", serif;
   line-height: 200%;
 }
 
-.about-wrapper .about-container .about-desc a {
+.about-wrapper .about-container .about-desc a, .about-wrapper .about-container .about-desc-about a {
   color: #292b2c;
   font-weight: 600;
   padding: 5px;
@@ -1430,15 +1433,15 @@ body {
   transition: ease 0.3s;
 }
 
-.about-wrapper .about-container .about-desc a:hover {
+.about-wrapper .about-container .about-desc a:hover, .about-wrapper .about-container .about-desc-about a:hover {
   text-decoration: underline;
 }
 
-.about-wrapper .about-container .about-desc a:hover .fa {
+.about-wrapper .about-container .about-desc a:hover .fa, .about-wrapper .about-container .about-desc-about a:hover .fa {
   margin-left: 10px;
 }
 
-.about-wrapper .about-container .about-desc a .fa {
+.about-wrapper .about-container .about-desc a .fa, .about-wrapper .about-container .about-desc-about a .fa {
   margin-left: 5px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
@@ -1660,7 +1663,7 @@ body {
 }
 
 .testimonial-wrapper {
-  background-color: #f0f0f0;
+  background-color: #fbfbfb;
   padding: 5rem 0;
 }
 

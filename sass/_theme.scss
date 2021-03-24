@@ -247,10 +247,13 @@ body {
         }
       }
     }
-    .about-desc {
+    .about-desc-about {
       border: 1px solid $border-color;
       padding: 2.5rem;
       border-radius: $border-radius;
+      @extend .about-desc;
+    }
+    .about-desc {
       flex: 3;
       h2 {
         font-size: 3.5rem;
@@ -456,7 +459,7 @@ body {
 // testimonial
 
 .testimonial-wrapper {
-  background-color: #f0f0f0;
+  background-color: #fbfbfb;
   padding: 5rem 0;
   .container {
     text-align: center;

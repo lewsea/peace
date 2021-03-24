@@ -17,7 +17,7 @@
 		</div>
 
 		<section class="wrapper about-wrapper">
-			<div class="container flex-space-center">
+			<div class="about-container container flex-space-center">
 				<div class="about-img">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt="">
 					<div class="about-img-desc">
