@@ -10,15 +10,29 @@
 
         <?php get_template_part( 'template-parts/content', 'page' ) ?>
 
-        <!-- ajax filter  -->
-        <div id="gallery-filter" class="gallery-filter">
-            <div class="filter-list">
-                <p>lets just pretend this is a filter for a moment</p>
-            </div>
+        <div class="filter-wrapper">
+            <ul class="filter-gallery">
+                <li>
+                    <a class="filter-gallery-item" href="">All</a>
+                </li>
+            <?php
+                $cat_args = array(
+                    'exclude' => array(1),
+                    'option_all' => 'All' 
+                );
+
+                $categories = get_categories($cat_args);
+
+                foreach($categories as $cat) : ?>
+                    <li>
+                        <a class="filter-gallery-item" data-category="<?php echo $cat->term_id?>" href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
 
 		<div class="container">
-			<div class="wrapper masonry-grid gallery">
+			<div class="wrapper masonry-grid gallery filter-galleries">
 				<?php 
 				$args = array (
 					'post_type' => 'gallery',

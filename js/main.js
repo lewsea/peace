@@ -21,8 +21,33 @@ jQuery(".gallery").each(function () {
   });
 });
 
-// jQuery(".mfp-container").magnificPopup({
-//   delegate: ".mfp-gallery", // child items selector, by clicking on it popup will open
-//   type: "image",
-//   // other options
-// });
+// gallery filter
+
+jQuery(function () {
+  jQuery(document).on("click", ".filter-gallery-item", function (e) {
+    e.preventDefault();
+
+    var category = jQuery(this).data("category");
+
+    jQuery.ajax({
+      url: wpAjax.ajaxUrl,
+      data: { action: "filter", category: category },
+      type: "post",
+      success: function (result) {
+        jQuery(".filter-galleries").html(result);
+
+        jQuery(function () {
+          const grid = document.querySelector(".masonry-grid");
+
+          const masonry = new Masonry(grid, {
+            itemSelector: ".masonry-grid-img",
+            gap: "1rem",
+          });
+        });
+      },
+      error: function (result) {
+        console.warn(result);
+      },
+    });
+  });
+});

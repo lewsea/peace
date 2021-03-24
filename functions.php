@@ -151,6 +151,10 @@ function peace_scripts() {
 	// wp_enqueue_script( 'peace-jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array(), _S_VERSION, true );
 	wp_enqueue_script( 'peace-popup-js', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', 'jquery', _S_VERSION, true );
     wp_enqueue_script( 'peace-script', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
+    
+    wp_localize_script( 'main-script', 'wpAjax', 
+        array('ajaxUrl' => admin_url('admin-ajax.php')) 
+    );  
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -218,4 +222,5 @@ function gp_register_taxonomy_for_object_type() {
 
 add_action( 'init', 'gp_register_taxonomy_for_object_type' );
 
+// 
 
