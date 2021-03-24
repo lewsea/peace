@@ -27,4 +27,9 @@ Blog
 ![blog](https://user-images.githubusercontent.com/55370617/107752206-63464a80-6d59-11eb-970f-b60a56faf75b.png "blog")
 
 - Contact
+
+![contact](https://user-images.githubusercontent.com/55370617/112334334-4e64bb80-8cf6-11eb-9ab0-c64824125a34.png)
+
 - About
+
+![about](https://user-images.githubusercontent.com/55370617/112334316-4a389e00-8cf6-11eb-84c1-70ea273425f6.png)
