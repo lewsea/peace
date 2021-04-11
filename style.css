@@ -1004,10 +1004,10 @@ body {
           transform: translate(-50%, -50%);
   font-size: clamp(2rem, 5vw, 4rem);
   display: inline-block;
-  background-color: #fff;
+  background-color: rgba(41, 43, 44, 0.8);
   padding: 5px 5rem;
   border-radius: 8px;
-  color: #292b2c;
+  color: #fff;
   margin: 0;
   z-index: 1;
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);

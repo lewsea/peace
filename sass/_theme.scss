@@ -62,10 +62,10 @@ body {
       transform: translate(-50%, -50%);
       font-size: clamp(2rem, 5vw, 4rem);
       display: inline-block;
-      background-color: $color-light;
+      background-color: rgba($color-primary, $alpha: 0.8);
       padding: 5px 5rem;
       border-radius: $border-radius;
-      color: $color-anchor;
+      color: $color-light;
       margin: 0;
       z-index: 1;
       box-shadow: $box-shadow-hov;

@@ -29,7 +29,7 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas amet ad ut aliquid perspiciatis esse repudiandae nulla odit at eius temporibus hic id dolorem molestiae, excepturi corporis quaerat voluptatibus quidem ab officia maiores? Esse a, commodi unde at illum quis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quis.</p>
                 </div>
                 <div class="desc-block">
-                    <h4>Inspiration</h4>
+                    <h4>Hobby/h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas amet ad ut aliquid perspiciatis esse repudiandae nulla odit at eius temporibus hic id dolorem molestiae, excepturi corporis quaerat voluptatibus quidem ab officia maiores? Esse a, commodi unde at illum quis?</p>
                 </div>
                 <div class="desc-block">
