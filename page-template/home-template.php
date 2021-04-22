@@ -39,16 +39,24 @@
 				<p>John Dough’ s client Lufthansa Scandinavian K-pop sophisticated Toto Ettinger, tote bag conversation lovely handsome intricate pintxos Tsutaya. Scandinavian cutting-edge handsome conversation tote bag  concierge boulevard.</p>
 				<div class="clients-logo">
 					<div class="client-logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/serene.png" alt="">
+                        <a href="http://serene.luisgudmalin.online">
+						    <img src="<?php echo get_template_directory_uri(); ?>/img/serene.png" alt="">
+                        </a>
 					</div>
 					<div class="client-logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/calm.png" alt="">
+                        <a href="http://calm.luisgudmalin.online">
+						    <img src="<?php echo get_template_directory_uri(); ?>/img/calm.png" alt="">
+                        </a>
 					</div>
 					<div class="client-logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/peace.png" alt="">
+                        <a href="http://peace.luisgudmalin.online/">
+						    <img src="<?php echo get_template_directory_uri(); ?>/img/peace.png" alt="">
+                        </a>
 					</div>
 					<div class="client-logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/tranquil.png" alt="">
+                        <a href="http://tranquil.luisgudmalin.online/">
+						    <img src="<?php echo get_template_directory_uri(); ?>/img/tranquil.png" alt="">
+                        </a>
 					</div>
 				</div>
 				<div class="wrapper home-grid">

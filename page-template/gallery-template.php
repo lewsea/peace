@@ -36,7 +36,7 @@
 				<?php 
 				$args = array (
 					'post_type' => 'gallery',
-					'posts_per_page' => 0,
+					'posts_per_page' => -1,
 				);
 				$imgs = new WP_Query($args);
 				while ($imgs->have_posts()) {

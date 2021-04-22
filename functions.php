@@ -192,6 +192,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Gallery Post Type
 
 function gallery_post_type() {
+    register_taxonomy_for_object_type( 'post_tag', 'gallery' );
 	register_post_type('gallery', 
 	array(
 		'rewrite' => array('slug' => 'galleries'),
@@ -213,14 +214,3 @@ function gallery_post_type() {
 }
 
 add_action('init', 'gallery_post_type');
-
-// Adding tags to custom posts types
-
-function gp_register_taxonomy_for_object_type() {
-    register_taxonomy_for_object_type( 'post_tag', 'gallery' );
-};
-
-add_action( 'init', 'gp_register_taxonomy_for_object_type' );
-
-// 
-
