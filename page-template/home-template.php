@@ -60,49 +60,49 @@
 					</div>
 				</div>
 				<div class="wrapper home-grid">
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/v2.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v2.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/v1.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v1.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/v3.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/v3.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/4.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/4.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/5.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/5.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/6.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/6.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>
 							<span>Categories, Tags</span>
 						</div>
 					</div>
-					<div class="home-grid-img">
+					<div class="home-grid-img" href="<?php echo get_template_directory_uri(); ?>/img/7.png">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/7.png" alt="">
 						<div class="home-grid-desc">
 							<p>Peace</p>

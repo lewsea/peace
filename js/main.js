@@ -21,6 +21,17 @@ jQuery(".gallery").each(function () {
   });
 });
 
+jQuery(".home-grid").each(function () {
+  // the containers for all your galleries
+  jQuery(this).magnificPopup({
+    delegate: ".home-grid-img", // the selector for gallery item
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+});
+
 // gallery filter
 
 jQuery(function () {
