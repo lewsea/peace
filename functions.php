@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'peace_widgets_init' );
  * Enqueue scripts and styles.
  */
 function peace_scripts() {
-	wp_enqueue_style( 'peace-popup-css', get_template_directory_uri() . '/css/magnific-popup.css', array(), _S_VERSION );
+	wp_enqueue_style( 'peace-popup-css', get_template_directory_uri() . '/css/magnific-popup.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'peace-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style('fontawesome', '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_style_add_data( 'peace-style', 'rtl', 'replace' );
